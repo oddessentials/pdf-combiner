@@ -4,6 +4,8 @@ Combine any number of PDFs into one file, right on your computer. Your files nev
 
 **Use it online:** https://oddessentials.github.io/pdf-combiner/ (nothing is uploaded; combining happens in your browser).
 
+**Find it useful?** Please consider supporting our work: https://oddessentials.ai/donate/
+
 Prefer to run it yourself? Follow the steps below.
 
 ## Setup (one time)
