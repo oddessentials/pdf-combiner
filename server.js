@@ -12,6 +12,10 @@ const routes = {
   '/style.css': ['public/style.css', 'text/css; charset=utf-8'],
   '/app.js': ['public/app.js', js],
   '/pdf-lib.min.js': ['node_modules/pdf-lib/dist/pdf-lib.min.js', js],
+  '/favicon.ico': ['public/favicon.ico', 'image/x-icon'],
+  '/favicon.svg': ['public/favicon.svg', 'image/svg+xml'],
+  '/apple-touch-icon.png': ['public/apple-touch-icon.png', 'image/png'],
+  '/og-image.png': ['public/og-image.png', 'image/png'],
 };
 const securityHeaders = {
   'X-Content-Type-Options': 'nosniff',
