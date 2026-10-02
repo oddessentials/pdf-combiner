@@ -1,47 +1,57 @@
+[![PDF Combiner by Odd Essentials](public/og-image.png)](https://oddessentials.github.io/pdf-combiner/)
+
 # PDF Combiner
 
-Combine any number of PDFs into one file, right on your computer. Your files never leave your machine.
+Merge any number of PDFs into one file, right in your browser. Free, private, and nothing is uploaded.
 
-**Use it online:** https://oddessentials.github.io/pdf-combiner/ (nothing is uploaded; combining happens in your browser).
+**[Open PDF Combiner →](https://oddessentials.github.io/pdf-combiner/)**
 
-**Find it useful?** Please consider supporting our work: https://oddessentials.ai/donate/
+## How to use it
 
-Prefer to run it yourself? Follow the steps below.
+1. Drag your PDFs onto the page, or click **Choose PDFs**.
+2. Put them in order with the **↑** and **↓** buttons. Remove any with **✕**.
+3. Optionally change the file name under **Save as**.
+4. Click **Combine PDFs**. Your browser downloads the combined file.
 
-## Setup (one time)
+## Your files stay private
 
-1. Install [Node.js](https://nodejs.org) (version 18 or newer).
-2. Open a terminal in this folder and run:
+All the work happens inside your browser. Your PDFs are never uploaded anywhere, not even to us.
+
+## Run it on your own computer
+
+Prefer to run it offline? You'll need [Node.js](https://nodejs.org) 18 or newer.
+
+1. Open a terminal in this folder and install once:
 
    ```
    npm install
    ```
 
-## Use it
-
-1. Start the app:
+2. Start the app:
 
    ```
    npm start
    ```
 
    Your browser opens automatically. If it doesn't, open the address shown in the terminal (usually http://localhost:3000).
-2. Drag your PDFs onto the page, or click **Choose PDFs**.
-3. Put them in order with the **↑** and **↓** buttons. Remove any with **✕**.
-4. Optionally change the name under **Save as**.
-5. Click **Combine PDFs**. The combined file is saved to your Downloads folder.
 
 To stop the app, press `Ctrl+C` in the terminal.
 
 ## Troubleshooting
 
-- **"pdf-lib is missing"**: run `npm install`, then `npm start` again.
-- **Port already in use**: the app tries the next port by itself and shows the address it is using. To choose one, run `PORT=4000 npm start` (PowerShell: `$env:PORT=4000; npm start`).
-- **Don't want the browser to open automatically**: run with `NO_OPEN=1`.
-- **"This PDF is password-protected"**: open it in your PDF viewer, save a copy without the password, and add that copy.
-- **"This file looks damaged"**: re-download or re-save the file and try again.
+| Problem | Fix |
+|---|---|
+| "This PDF is password-protected" | Open it in your PDF viewer, save a copy without the password, and add that copy. |
+| "This file looks damaged" | Re-download or re-save the file, then add it again. |
+| "pdf-lib is missing" | Run `npm install`, then `npm start` again. |
+| Port already in use | The app tries the next port by itself and prints the address. To pick one: `PORT=4000 npm start` (PowerShell: `$env:PORT=4000; npm start`). |
+| Don't want the browser to open | Start with `NO_OPEN=1 npm start` (PowerShell: `$env:NO_OPEN=1; npm start`). |
 
 ## Good to know
 
-- Bookmarks, internal links, and fillable form fields may not carry over into the combined file. Page content always does.
+- Page content always carries over. Bookmarks, internal links, and fillable form fields may not.
 - Very large jobs (hundreds of MB) are limited by your browser's memory and may be slow.
+
+## Support our work
+
+PDF Combiner is made by [Odd Essentials](https://oddessentials.ai). If it saved you time, please consider a [donation](https://oddessentials.ai/donate/). ♥
