@@ -2,6 +2,10 @@
 
 Combine any number of PDFs into one file, right on your computer. Your files never leave your machine.
 
+**Use it online:** https://oddessentials.github.io/pdf-combiner/ (nothing is uploaded; combining happens in your browser).
+
+Prefer to run it yourself? Follow the steps below.
+
 ## Setup (one time)
 
 1. Install [Node.js](https://nodejs.org) (version 18 or newer).
