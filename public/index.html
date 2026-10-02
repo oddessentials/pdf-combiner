@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Combine PDFs</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/pdf-lib.min.js" defer></script>
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <main class="card">
+    <header>
+      <h1>Combine PDFs</h1>
+      <p class="subtitle">Put several PDFs into one file. Everything stays on your computer.</p>
+    </header>
+
+    <section id="dropzone" class="dropzone" aria-label="Add PDFs">
+      <div id="drop-full" class="drop-full">
+        <p class="drop-title">Drag PDFs here</p>
+        <p class="drop-or">or</p>
+        <button type="button" id="choose" class="btn btn-primary">Choose PDFs</button>
+      </div>
+      <div id="drop-slim" class="drop-slim" hidden>
+        <span>Drag more PDFs here or</span>
+        <button type="button" id="add-more" class="btn btn-secondary">Add more PDFs</button>
+      </div>
+      <input type="file" id="file-input" multiple accept=".pdf,application/pdf" hidden>
+    </section>
+
+    <p id="empty" class="empty">No files yet. Add two or more PDFs to get started.</p>
+    <p id="order-hint" class="order-hint" hidden>Files will be combined in this order.</p>
+    <ol id="file-list" class="file-list"></ol>
+    <p id="size-warning" class="warning" hidden>These files are large. Combining may be slow.</p>
+
+    <div id="status" class="status" role="status" aria-live="polite"></div>
+    <p id="download-wrap" class="download-wrap" hidden><a id="download-again" class="link">Download again</a></p>
+
+    <footer class="footer">
+      <div class="field">
+        <label for="output-name">Save as:</label>
+        <input type="text" id="output-name" value="combined.pdf" autocomplete="off" spellcheck="false">
+      </div>
+      <div class="actions">
+        <button type="button" id="clear" class="btn btn-secondary">Clear all</button>
+        <button type="button" id="combine" class="btn btn-primary" disabled aria-describedby="combine-hint">Combine PDFs</button>
+      </div>
+      <p id="combine-hint" class="hint">Add at least 2 PDFs to combine.</p>
+    </footer>
+  </main>
+</body>
+</html>
