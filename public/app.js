@@ -82,7 +82,7 @@ function row(item, i) {
     return b;
   };
   const li = el('li', { className: `file ${item.state}` },
-    el('span', { className: 'pos', ariaHidden: 'true', textContent: i + 1 }),
+    el('span', { className: 'pos', ariaHidden: 'true', textContent: String(i + 1).padStart(2, '0') }),
     el('div', { className: 'info' },
       el('span', { className: 'name', title: name, textContent: name }),
       el('span', { className: 'meta', textContent: meta }),
